@@ -2,27 +2,22 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { itemsList } from "./data.jsx";
-import Item from "./Item.jsx";
+import data from "./data";
+import List from "./List";
 
 function App() {
-  const [data, setData] = useState(itemsList);
-
-  const removeItem = (id) => {
-    setData((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
-
-  const clearItems = () => {
-    setData([]);
+  const [people, setPeople] = useState(data);
+  const handleClear = () => {
+    setPeople([]);
   };
 
   return (
-    <>
-      {data.map((item) => (
-        <Item key={item.id} id={item.id} name={item.name} remove={removeItem} />
-      ))}
-      <button onClick={clearItems}>Clear</button>
-    </>
+    <div>
+      <h1>Employee</h1>
+      {<List people={people} />}
+      {console.log(people)}
+      <button onClick={handleClear}>Clear All</button>
+    </div>
   );
 }
 
