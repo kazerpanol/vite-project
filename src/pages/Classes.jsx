@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getClasses } from "../api/classService";
+import ClassCard from "../components/ClassCard";
 
 function Classes() {
   const [classes, setClass] = useState([]);
@@ -7,14 +8,20 @@ function Classes() {
     const fetchClass = async () => {
       try {
         const data = await getClasses();
-        const res = data.json();
-        setClass(res);
+        setClass(data);
       } catch (error) {}
     };
     fetchClass();
   }, []);
 
-  return <h1> List of Class</h1>;
+  return (
+    <section>
+      {classes.map((c) => {
+        console.log(c);
+        return <ClassCard key={c.id} classData={c} />;
+      })}
+    </section>
+  );
 }
 
 export default Classes;

@@ -1,0 +1,47 @@
+.class-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1, 0.5rem;
+}
+
+.class-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.class-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.class-name {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.class-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0 10px 0;
+}
+
+.class-stats {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.class-exercises {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
