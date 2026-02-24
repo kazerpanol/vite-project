@@ -15,9 +15,8 @@ function Classes() {
   }, []);
 
   return (
-    <section>
+    <section className="class-container">
       {classes.map((c) => {
-        console.log(c);
         return <ClassCard key={c.id} classData={c} />;
       })}
     </section>

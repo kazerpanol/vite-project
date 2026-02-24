@@ -1,15 +1,56 @@
-.class-card {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-  background-color: #fff;
-  padding: 1, 0.5rem;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif; /* fallback */
+  padding: 2rem;
+}
+
+.class-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 300px;
+
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+
+  border-radius: 16px;
+  padding: 1.2rem;
+
+  box-shadow:
+    0 0 10px rgba(89, 133, 255, 0.2),
+    0 0 20px rgba(89, 133, 255, 0.1);
+
+  transition: all 0.3s ease;
+}
+.class-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow:
+    0 0 15px rgba(89, 133, 255, 0.2),
+    0 0 30px rgba(89, 133, 255, 0.4);
+}
+.class-icon {
+  background-color: rgba(89, 133, 255);
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+}
 .class-image {
   width: 120px;
   height: 120px;
@@ -24,7 +65,7 @@
 .class-name {
   margin: 0;
   font-size: 1.5rem;
-  color: #222;
+  color: #ffffff;
 }
 
 .class-desc {
